@@ -15,3 +15,7 @@ function addPixels (){
     }
 }
 addPixels()
+function CorSelected (event) {
+    let classSelect = document.querySelector('.selected');
+    
+}
