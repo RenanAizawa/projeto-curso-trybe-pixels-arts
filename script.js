@@ -5,12 +5,10 @@ const blackB = document.getElementsByClassName('black');
 const redB = document.getElementsByClassName('red');
 const blueB = document.getElementsByClassName('blue');
 const greenB = document.getElementsByClassName('green');
-
 // Funções Aplicadas
-addPixels()
-function addPixels () {
-    for (let i = 0; i < 5; i++) {
-        for (let i = 0; i < 5; i++) {
+function addPixels (){
+    for (let i = 0; i < 5; i++){
+        for (let i = 0; i < 5; i++){
             let divPixel = document.createElement('div');
             let attClass = document.createAttribute('class');
             attClass.value = 'pixel';
@@ -18,4 +16,9 @@ function addPixels () {
             pixelBoard.appendChild(divPixel)
         }    
     }
+}
+addPixels()
+function colorSeletec (event){
+    const classSeletec = document.querySelector('.selected');
+    classSeletec.
 }
