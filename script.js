@@ -2,6 +2,9 @@
 console.log('Ola, mundo! Estou funcionado!!!')
 const pixelBoard = document.getElementById('pixel-board');
 var mainColor = document.getElementsByClassName('black');
+var color1 = document.getElementsByClassName('cor1');
+var color2 = document.getElementsByClassName('cor2');
+var color3 = document.getElementsByClassName('cor3');
 // Função de criação das div e class
 function addPixels (){
     for (let i = 0; i < 5; i++) {
@@ -20,7 +23,7 @@ function addPixels (){
     }
 }
 // Seletetor de cor
-function CorSelected (event) {
+function corSelected (event) {
     let classSelect = document.querySelector('.selected');
     classSelect.classList.remove('selected');
     event.target.className = 'selected'
@@ -28,4 +31,7 @@ function CorSelected (event) {
 
 // Aplicação de funções
 addPixels()
-mainColor.addEventListener('click', CorSelected)
+mainColor.addEventListener('click', corSelected);
+color1.addEventListener('click',corSelected);
+color2.addEventListener('click',corSelected);
+color3.addEventListener('click',corSelected);
