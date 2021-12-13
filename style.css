@@ -13,13 +13,13 @@
 .black {
     background-color: black;
 }
-.red {
+.cor1 {
     background-color: red;
 }
-.blue {
+.cor2 {
     background-color: blue;
 }
-.green {
+.cor3 {
     background-color: green;
 }
 /* Tabela de cores*/
@@ -40,4 +40,5 @@
     margin-top: 0px;
     margin-bottom: 0px;
     background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
 }
