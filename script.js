@@ -40,8 +40,8 @@ function randomColor (){
         for (var n = 0; n < 3; n++){
             if ( i == 0){
                 coloracao = 000;
-                var corRgb = document.body.style.color = 'rgb(000, 000, 000)';
-                console.log(corRgb)
+                
+                console.log(coloracao)
             } else {
                 var coloracao = Math.floor((Math.random() * 255) + 1);
                 console.log(coloracao);
