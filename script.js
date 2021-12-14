@@ -1,10 +1,11 @@
 // Containers de variaveis
 console.log('Ola, mundo! Estou funcionado!!!')
 const pixelBoard = document.getElementById('pixel-board');
-var mainColor = document.getElementsByClassName('black');
-var color1 = document.getElementsByClassName('cor1');
-var color2 = document.getElementsByClassName('cor2');
-var color3 = document.getElementsByClassName('cor3');
+var mainColor = document.querySelector('.black');
+var color1 = document.querySelector('.cor1');
+var color2 = document.querySelector('.cor2');
+var color3 = document.querySelector('.cor3');
+var contColor = document.querySelectorAll('.color');
 // Função de criação das div e class
 function addPixels (){
     for (let i = 0; i < 5; i++) {
@@ -24,9 +25,13 @@ function addPixels (){
 }
 // Seletetor de cor
 function corSelected (event) {
-    let classSelect = document.querySelector('.selected');
-    classSelect.classList.remove('selected');
-    event.target.className = 'selected'
+    for (var i = 0; i < contColor.length; i++){
+        var colorSelc = document.querySelectorAll('.color')[i];
+        colorSelc.classList.remove('selected');
+    }
+    var alvo = event.target;
+    console.log(alvo)
+    alvo.classList.add('selected') // agradecimentos ao dvpatrick
 }
 
 // Aplicação de funções
