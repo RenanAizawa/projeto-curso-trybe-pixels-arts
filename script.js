@@ -33,9 +33,25 @@ function corSelected (event) {
     console.log(alvo)
     alvo.classList.add('selected') // agradecimentos ao dvpatrick
 }
-
+// Random Color
+function randomColor (){
+    for (var i = 0; i < 4; i++) {
+        console.log("paleta " + (i + 1))
+        for (var n = 0; n < 3; n++){
+            if ( i == 0){
+                coloracao = 000;
+                var corRgb = document.body.style.color = 'rgb(000, 000, 000)';
+                console.log(corRgb)
+            } else {
+                var coloracao = Math.floor((Math.random() * 255) + 1);
+                console.log(coloracao);
+            }
+        }
+    }
+}
 // Aplicação de funções
 addPixels()
+randomColor()
 mainColor.addEventListener('click', corSelected);
 color1.addEventListener('click',corSelected);
 color2.addEventListener('click',corSelected);
