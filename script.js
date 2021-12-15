@@ -20,8 +20,15 @@ function addPixels (){
             attClass.value = 'pixel';
             divPixel.setAttributeNode(attClass);
             pixelBoard.appendChild(divPixel)
+            divPixel.addEventListener('click', pointColor)
         }    
     }
+}
+// função pra colorir
+function pointColor(event){
+    var puxaCor = document.querySelector('.selected');
+    event.target.style.backgroundColor = puxaCor.style.backgroundColor;
+    console.log(puxaCor.style.backgroundColor)
 }
 // Seletetor de cor
 function corSelected (event) {
@@ -35,19 +42,15 @@ function corSelected (event) {
 }
 // Random Color
 function randomColor (){
-    for (var i = 0; i < 4; i++) {
-        console.log("paleta " + (i + 1))
-        for (var n = 0; n < 3; n++){
-            if ( i == 0){
-                coloracao = 000;
-                
-                console.log(coloracao)
-            } else {
-                var coloracao = Math.floor((Math.random() * 255) + 1);
-                console.log(coloracao);
-            }
-        }
+    var arrayColor = []
+    for (var i=0; i<3; i++){
+        var coloracao = Math.floor((Math.random() * 255) + 1);
+        arrayColor.push(coloracao)
+        console.log(arrayColor[i])
+        var rgb = 'rgb (' + arrayColor[0] + ', ' + arrayColor[1] + ', ' + arrayColor[2] + ')';
     }
+    return rgb
+    console.log(rgb)   
 }
 // Aplicação de funções
 addPixels()
@@ -56,3 +59,5 @@ mainColor.addEventListener('click', corSelected);
 color1.addEventListener('click',corSelected);
 color2.addEventListener('click',corSelected);
 color3.addEventListener('click',corSelected);
+
+window.onload = function(){mainColor.classList.add('selected')}

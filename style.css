@@ -1,8 +1,24 @@
 /* Desenvolvimento da paleta de cores */
+.header {
+    display: flex;
+    justify-content: center;
+}
 .main-container {
     width: 500px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 32%;
 }
+/* .container {
+    display: flex;
+    justify-content: center;
+}
+.color-palette {
+    display: flex;
+    justify-content: center;
+
+} */
 .color {
     border: 1px solid black;
     width: 50px;
