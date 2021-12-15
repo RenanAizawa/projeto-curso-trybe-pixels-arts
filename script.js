@@ -24,7 +24,7 @@ function addPixels (){
         }    
     }
 }
-// função pra colorir
+// função pra colorir auxilio: https://github.com/LDantasA
 function pointColor(event){
     var puxaCor = document.querySelector('.selected');
     event.target.style.backgroundColor = puxaCor.style.backgroundColor;
