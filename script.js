@@ -52,6 +52,13 @@ function randomColor (){
     return rgb
     console.log(rgb)   
 }
+// Função para limpar os pixels
+function zerar() {
+    let pixel = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixel.length; i++) {
+        pixel[i].style.backgroundColor = "#fff"
+    }
+}
 // Aplicação de funções
 addPixels()
 randomColor()
